@@ -16,6 +16,9 @@ ms.subservice: msbuild
 
 When you build projects, it's often necessary to set build options using information that isn't in the project file or the files that comprise your project. This information is typically stored in environment variables.
 
+> [!NOTE]
+> Environment variables are considered trusted inputs by MSBuild. They can direct the loading of extensibility from non-default locations during a build.
+
 ## Reference environment variables
 
  All environment variables that are valid MSBuild property names are available to the MSBuild project file as properties. Valid property names are described in [MSBuild properties](msbuild-properties.md). For example, environment variables that begin with a number aren't available in MSBuild.
